@@ -2,4 +2,4 @@
 
 
 
-![](C:\Users\Edvaldojr\Documents\java\img\Captura de tela 2022-12-14 194621.jpg)
+![](https://github.com/edvaldoljr/Projeto-Expasao-Java-SpringBoot-Quarkus/blob/main/img/Captura%20de%20tela%202022-12-14%20194621.jpg?raw=true)
