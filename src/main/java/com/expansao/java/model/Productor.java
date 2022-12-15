@@ -6,6 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
+import java.math.BigDecimal;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -24,5 +25,15 @@ public class Productor {
     private String brand;
     private String model;
     private String description;
+    private BigDecimal price;
+    
+    //Consrutor sem necessidade de passar o Id;
+    public Productor(Store store, String brand, String model, String description, BigDecimal price) {
+        this.store = store;
+        this.brand = brand;
+        this.model = model;
+        this.description = description;
+        this.price = price;
+    }
    
 }

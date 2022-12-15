@@ -15,6 +15,7 @@ public class StoreService {
     @Autowired
     private StoreRepository storeRepository;
     
+    //Method GET
     public List<StoreDto> buscarLoja() throws Exception {
         List<Store> stores = storeRepository.findAll();
         if (stores.isEmpty()) {
@@ -24,6 +25,16 @@ public class StoreService {
         return mapStoreDto(stores);
     }
 
+    //Method POST
+    public void adicionarLoja(StoreDto store) {
+        Store storeEntity = new Store();
+        storeEntity.setName(store.getName());
+        storeEntity.setAddress(store.getAddress());
+        storeEntity.setPhone(store.getPhone());
+        
+        storeRepository.save(storeEntity);
+    }
+     
     private List<StoreDto> mapStoreDto(List<Store> stores) {
         
         List<StoreDto> storeDtos = new ArrayList<>(); //Criando uma lisa vazia;
